@@ -1,0 +1,11 @@
+Start Proxy: 
+cloud_sql_proxy.exe -instances="safewheel-219707:us-east1:safewheel"=tcp:3306
+
+MySQL (New Window): 
+mysql -u steeni -p --host 127.0.0.1
+
+Run Server (New Window): 
+virtualenv env
+env\scripts\activate
+pip install -r requirements.txt
+python manage.py runserver
